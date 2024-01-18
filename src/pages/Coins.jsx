@@ -7,7 +7,7 @@ const Coins = () => {
 
   const { data } = useGetAllCoinsQuery("usd");
 
-  console.log("data =", data);
+  // console.log("data =", data);
   return (
     <div className="w-[90%] max-h-[670px] md:w-[80%] mx-auto flex flex-col">
       <CoinsTable coins={data} />
