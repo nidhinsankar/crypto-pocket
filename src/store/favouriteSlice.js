@@ -7,7 +7,7 @@ const favouriteSlice = createSlice({
   },
   reducers: {
     addFavouriteCoin: (state, action) => {
-      state.favouriteCoins.push(action.payload);
+      state.coins.push(action.payload);
     },
   },
 });

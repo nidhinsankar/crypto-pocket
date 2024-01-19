@@ -4,7 +4,7 @@ import { usefavouriteCotext } from "../context/Favourite";
 
 const Favourites = () => {
   // const {favouritesCoins} = usefavouriteCotext()
-  const favouriteCoins = useSelector((state) => state.Favourites.coins);
+  const favouriteCoins = useSelector((state) => state.favourites.coins);
   console.log(favouriteCoins);
   return (
     <div className="w-[90%] max-h-[670px] overflow-y-auto md:w-[80%] mx-auto flex flex-col">
