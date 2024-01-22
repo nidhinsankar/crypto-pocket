@@ -5,8 +5,8 @@ export const coinsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: `https://api.coingecko.com/api/v3/` }),
   endpoints: (builder) => ({
     getAllCoins: builder.query({
-      query: (currency) =>
-        `coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d`,
+      query: (currency, sortOrder) =>
+        `coins/markets?vs_currency=${currency}&order=${sortOrder}&per_page=10&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d`,
     }),
     getSingleCoin: builder.query({
       query: (id) => `coins/${id}`,

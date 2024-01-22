@@ -4,8 +4,9 @@ const appSlice = createSlice({
   name: "appSlice",
   initialState: {
     searchCoin: "",
-    currency: "",
-    sortType: "",
+    currency: "usd",
+    sortType: "market_cap_asc",
+    allCoins: [],
   },
   reducers: {
     addSearchText: (state, action) => {
@@ -16,6 +17,9 @@ const appSlice = createSlice({
     },
     addSortType: (state, action) => {
       state.sortType = action.payload;
+    },
+    addAllCoins: (state, action) => {
+      state.allCoins = action.payload;
     },
   },
 });
